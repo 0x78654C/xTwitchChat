@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Net.NetworkInformation;
+using Microsoft.Web.WebView2.Core;
 
 namespace xTwitchChat
 {
@@ -19,7 +20,7 @@ namespace xTwitchChat
             // Check Inernet connection
             if (PingHost("8.8.8.8") == false)
             {
-                MessageBox.Show("No internet connection!", this.Title, MessageBoxButton.OK,MessageBoxImage.Warning);
+                MessageBox.Show("No internet connection!", this.Title, MessageBoxButton.OK, MessageBoxImage.Warning);
                 this.Close();
             }
 
@@ -37,6 +38,7 @@ namespace xTwitchChat
             if (string.IsNullOrEmpty(_channelName))
                 this.Close();
 
+
             // Loading chat.
             LoadWeb();
         }
@@ -48,6 +50,7 @@ namespace xTwitchChat
         {
             twitch_web.Source = new Uri($"https://www.twitch.tv/popout/{_channelName}/chat");
             await twitch_web.EnsureCoreWebView2Async(null);
+
         }
 
 

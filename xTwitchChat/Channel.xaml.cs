@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.IO;
+using System.Windows;
 using System.Windows.Input;
 
 namespace xTwitchChat
@@ -62,6 +63,21 @@ namespace xTwitchChat
         private void miniMizeLBL_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             WindowState = WindowState.Minimized;
+        }
+
+        /// <summary>
+        /// Deleting cookie file necesary containg login data.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void logout_check_Checked(object sender, RoutedEventArgs e)
+        {
+            string cookieFileLocation = Directory.GetCurrentDirectory()+@"\xTwitchChat.exe.WebView2\EBWebView\Default\Cookies";
+            if (File.Exists(cookieFileLocation))
+            {
+                File.SetAttributes(cookieFileLocation, FileAttributes.Normal);
+                File.Delete(cookieFileLocation);
+            }
         }
     }
 }

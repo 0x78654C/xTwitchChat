@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         FontSize="20"
         ResizeMode="NoResize"
-        Title="Channel Name" WindowStyle="None" MouseDown="Window_MouseDown" Height="230.842" Width="249.704" Icon="3.bmp">
+        Title="Channel Name" WindowStyle="None" MouseDown="Window_MouseDown" Height="260.842" Width="249.704" Icon="3.bmp">
 
     <Window.Resources>
         <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
@@ -63,7 +63,8 @@
                 <Label Name="miniMizeLBL" Content="_" FontSize="20" Foreground="#FFE1DDE2" HorizontalAlignment="Right" Margin="0,-7,37,0" VerticalAlignment="Top" Height="46" PreviewMouseDown="miniMizeLBL_PreviewMouseDown" />
             </Grid>
             <TextBox Style="{StaticResource MyWaterMarkStyle}" SelectedText="Channel name" Name="channel_name" TextAlignment="Center" HorizontalAlignment="Left"   Margin="27,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="196" Height="42"/>
-            <Button Style="{DynamicResource RoundCorner2}" IsDefault="True" Name ="setchannel_btn" Content="Enter Twitch Chat" HorizontalAlignment="Left" Margin="27,153,0,0" VerticalAlignment="Top" FontSize="16" Width="196" Height="52" Foreground="WhiteSmoke"  Click="setchannel_btn_Click"/>
+            <Button Style="{DynamicResource RoundCorner2}" IsDefault="True" Name ="setchannel_btn" Content="Enter Twitch Chat" HorizontalAlignment="Left" Margin="27,145,0,0" VerticalAlignment="Top" FontSize="16" Width="196" Height="52" Foreground="WhiteSmoke"  Click="setchannel_btn_Click"/>
+            <CheckBox Name="logout_check" Content="Logout Twitch account from chat " FontSize="13" HorizontalAlignment="Left" Margin="17,234,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.88,-0.026" Checked="logout_check_Checked" Height="19"/>
         </Grid>
     </Border>
 </Window>
