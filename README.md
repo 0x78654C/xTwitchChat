@@ -15,4 +15,6 @@ Basic the app connects via a browser to https://www.twitch.tv/popout/{chanel_you
 # Media Samples
 
 ![alt text](https://github.com/0x78654C/xTwitchChat/blob/main/Media/1.bmp?raw=true)
+
+
 ![alt text](https://github.com/0x78654C/xTwitchChat/blob/main/Media/2.bmp?raw=true)
