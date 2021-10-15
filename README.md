@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/0x78654C/xTerminal/blob/main/media/trans.png">
+  <img src="https://github.com/0x78654C/xTwitchChat/blob/main/Media/logo.bmp">
 </p>
 
 
