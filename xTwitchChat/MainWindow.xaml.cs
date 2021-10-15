@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Net.NetworkInformation;
 
 namespace xTwitchChat
 {
@@ -9,10 +10,18 @@ namespace xTwitchChat
     public partial class MainWindow : Window
     {
         private string _channelName = "";
+
         public MainWindow()
         {
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
+
+            // Check Inernet connection
+            if (PingHost("8.8.8.8") == false)
+            {
+                MessageBox.Show("No internet connection!", this.Title, MessageBoxButton.OK,MessageBoxImage.Warning);
+                this.Close();
+            }
 
             // First we load the channel window for getting channel name.
             Channel channel = new Channel();
@@ -20,6 +29,9 @@ namespace xTwitchChat
 
             // We grab the channel name.
             _channelName = channel.channelName;
+
+            // We set the tile including the channel.
+            this.Title = this.Title + $" : Connected at {_channelName}";
 
             // If is null we exit the app.
             if (string.IsNullOrEmpty(_channelName))
@@ -55,6 +67,37 @@ namespace xTwitchChat
             }
             twitch_web.Height = this.Height - 30;
             twitch_web.Width = this.Width - 10;
+        }
+
+        /// <summary>
+        /// Verifies if IP is up or not
+        /// </summary>
+        /// <param name="ipAddress"></param>
+        /// <returns>verifies if IP is up or not</returns>
+        public static bool PingHost(string ipAddress)
+        {
+            bool pingable = false;
+            Ping pinger = null;
+            try
+            {
+                pinger = new Ping();
+                PingReply reply = pinger.Send(ipAddress);
+                pingable = reply.Status == IPStatus.Success;
+
+            }
+            catch
+            {
+                // We handle erros in other functions.
+            }
+            finally
+            {
+                if (pinger != null)
+                {
+                    pinger.Dispose();
+                }
+
+            }
+            return pingable;
         }
     }
 }
