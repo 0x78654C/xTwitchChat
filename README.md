@@ -16,7 +16,7 @@ NuGet Package: Microsoft.Web.WebView2
 # How It Works
 Just enter the channel name you want to connect to. 
 After you will be prompted from https://www.twitch.tv/popout/{chanel_you_connect}/chat for login.
-Basic the application connects via a browser to the specified link up mentioned.
+Basic the application connects via a browser to the specified link mentioned.
 
 # Media Samples
 
