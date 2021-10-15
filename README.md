@@ -1,5 +1,10 @@
+<p align="center">
+  <img src="https://github.com/0x78654C/xTerminal/blob/main/media/trans.png">
+</p>
+
+
 # xTwitchChat
-Simple Twitch Chat app
+Simple Twitch Chat App
 
 
 # Requiremetns
@@ -9,8 +14,9 @@ WebView2 Runtime: https://developer.microsoft.com/en-us/microsoft-edge/webview2/
 NuGet Package: Microsoft.Web.WebView2
 
 # How It Works
-Just enter the channel name you want to connect to. After you will promted from https://www.twitch.tv/popout/{chanel_you_connect}/chat for login.
-Basic the app connects via a browser to https://www.twitch.tv/popout/{chanel_you_connect}/chat for connection.
+Just enter the channel name you want to connect to. 
+After you will be prompted from https://www.twitch.tv/popout/{chanel_you_connect}/chat for login.
+Basic the application connects via a browser to the specified link up mentioned.
 
 # Media Samples
 

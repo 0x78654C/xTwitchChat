@@ -6,6 +6,6 @@
         xmlns:local="clr-namespace:xTwitchChat"
         xmlns:Wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" x:Class="xTwitchChat.MainWindow"
         mc:Ignorable="d"
-        Title="xTwitchChat" Height="735.01" Width="532.735" SizeChanged="Window_SizeChanged">
+        Title="xTwitchChat" Height="735.01" Width="532.735" SizeChanged="Window_SizeChanged" Icon="3.bmp">
     <Wpf:WebView2 Visibility="Visible"  HorizontalAlignment="Center" VerticalAlignment="Center" Name="twitch_web"/>
 </Window>

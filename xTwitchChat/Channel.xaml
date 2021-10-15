@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         FontSize="20"
         ResizeMode="NoResize"
-        Title="Channel Name" WindowStyle="None" MouseDown="Window_MouseDown" Height="230.842" Width="249.704">
+        Title="Channel Name" WindowStyle="None" MouseDown="Window_MouseDown" Height="230.842" Width="249.704" Icon="3.bmp">
 
     <Window.Resources>
         <Style x:Key="MyWaterMarkStyle" TargetType="{x:Type TextBox}">
