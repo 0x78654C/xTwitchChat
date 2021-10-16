@@ -23,7 +23,7 @@ namespace xTwitchChat
         /// <param name="e"></param>
         private void setchannel_btn_Click(object sender, RoutedEventArgs e)
         {
-            channelName = channel_name.Text;
+            channelName = channel_name.Text.Replace(" ",string.Empty);
             if (string.IsNullOrEmpty(channelName))
             {
                 MessageBox.Show("You must enter the Twitch channel name!");
