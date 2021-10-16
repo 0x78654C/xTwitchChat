@@ -23,7 +23,7 @@ namespace xTwitchChat
         /// <param name="e"></param>
         private void setchannel_btn_Click(object sender, RoutedEventArgs e)
         {
-            channelName = channel_name.Text.Replace(" ",string.Empty);
+            channelName = channel_name.Text.Replace(" ", string.Empty);
             if (string.IsNullOrEmpty(channelName))
             {
                 MessageBox.Show("You must enter the Twitch channel name!");
@@ -72,7 +72,7 @@ namespace xTwitchChat
         /// <param name="e"></param>
         private void logout_check_Checked(object sender, RoutedEventArgs e)
         {
-            string cookieFileLocation = Directory.GetCurrentDirectory()+@"\xTwitchChat.exe.WebView2\EBWebView\Default\Cookies";
+            string cookieFileLocation = Directory.GetCurrentDirectory() + @"\xTwitchChat.exe.WebView2\EBWebView\Default\Cookies";
             if (File.Exists(cookieFileLocation))
             {
                 File.SetAttributes(cookieFileLocation, FileAttributes.Normal);
