@@ -6,7 +6,7 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("xTwitchChat")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Simple Twitch Chat Application")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("xTwitchChat")]
