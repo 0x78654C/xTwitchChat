@@ -10,7 +10,9 @@ Simple Twitch Chat App
 # Requiremetns
 
 .NET Framework 4.7 or later
+
 WebView2 Runtime: https://developer.microsoft.com/en-us/microsoft-edge/webview2/
+
 NuGet Package: Microsoft.Web.WebView2
 
 # How It Works
