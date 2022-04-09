@@ -72,7 +72,7 @@ namespace xTwitchChat
         /// <param name="e"></param>
         private void logout_check_Checked(object sender, RoutedEventArgs e)
         {
-            string cookieFileLocation = Directory.GetCurrentDirectory() + @"\xTwitchChat.exe.WebView2\EBWebView\Default\Cookies";
+            string cookieFileLocation = Directory.GetCurrentDirectory() + @"\xTwitchChat.exe.WebView2\EBWebView\Default\Network\Cookies";
             if (File.Exists(cookieFileLocation))
             {
                 File.SetAttributes(cookieFileLocation, FileAttributes.Normal);
